@@ -1,0 +1,88 @@
+
+/* Navbar Starts from Here */
+#img1 {
+    margin-left: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+}
+
+.ImageDesign {
+    background-color: #E9A66E;
+}
+
+#inputText {
+    margin-left: 5rem;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border-color: #2E3191;
+    padding-left: 0.5rem;
+}
+
+.mobileName {
+    text-decoration: none;
+    color: #2E3191;
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.menuItemList {
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.menuItem {
+    text-decoration-line: none;
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.menuItem.active {
+    color: #2E3191;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+a:hover {
+    color: skyblue;
+}
+
+a {
+    transition: color 0.5s;
+}
+
+#img2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.search {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+#img3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.25rem;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.loginCredential {
+    text-decoration-line: none;
+    margin-left: 1rem;
+    color: white;
+    font-size: 1.5rem;
+}

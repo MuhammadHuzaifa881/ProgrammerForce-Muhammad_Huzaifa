@@ -1,0 +1,105 @@
+/* #12D879=green */
+/* 2435AB=blue */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.backgroundImage {
+  background: url("./Pictures/gradient_2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  background-repeat: no-repeat;
+  /* min-height: 100vh; */
+}
+.row {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0;
+}
+
+#loginform {
+  width: 400px;
+  height: 400px;
+  border-radius: 2rem;
+  border-color: #12d879;
+  border-width: 0.25rem;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  border-color: #646e9f;
+}
+#login {
+  color: #001647;
+  background-color: #12d879;
+  border-radius: 2rem;
+}
+#Signupform {
+  width: 400px;
+  height: 550px;
+  border-radius: 2rem;
+  border-color: #12d879;
+  border-width: 0.25rem;
+}
+#forgetScreen {
+  width: 400px;
+  height: 500px;
+  border-radius: 2rem;
+  border-color: #12d879;
+  border-width: 0.25rem;
+}
+.nav-color {
+  background: #2435ab;
+}
+.nav-color a:hover {
+  color: white;
+}
+
+.nav-link {
+  padding-top: 16px;
+}
+.dropdown-toggle {
+  display: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 42px;
+  left: -114px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-toggle:checked + label + .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background-color: lightgray;
+}
+/* configurationfile */
+.container-fluid {
+  --bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0;
+}
+#configurationfile {
+  width: 33rem;
+  height: 35.5rem;
+  margin-top: 0.25rem;
+  background-color: white;
+  border: 5px solid #12d879;
+  border-radius: 3rem;
+}
+table, th, td {
+  border:1px solid black;
+}

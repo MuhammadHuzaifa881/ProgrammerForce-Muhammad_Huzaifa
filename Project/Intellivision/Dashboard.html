@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+
+  <body>
+    <div class="container-fluid px-0">
+      <div class="row nav-color vw-100 px-4" style="height: 3rem">
+        <div class="col">
+          <a href="#" class="nav-link pt-2 px-4 fs-3 fw-itallic text-white"
+            >In<span style="color: #add8e6">Tellivision</span>
+          </a>
+        </div>
+        <div class="col">
+          <nav class="nav float-end">
+            <a
+              class="nav-link active text-white fs-5 active" style=" background-color: #12d879;
+              height: 3rem;"
+              aria-current="page"
+              href="#"
+              >Dashboard</a
+            >
+            <a class="nav-link text-white fs-5" href="DataTable.html">DataTable</a>
+            <a class="nav-link text-white fs-5" href="configuration.html">Configuration</a>
+            <a class="nav-link text-white fs-5" href="#">Setting</a>
+
+            <div class="dropdown">
+              <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+              <label for="dropdown-toggle" class="nav-link">
+                <img src="./Pictures/New folder/user.png" style="width: 30px; height: 20px;">
+              </label>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">UserName</a>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- Cards Start from Here -->
+    <div class="container-fluid">
+      <div class="row mt-4 gap-3">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <img
+                    src="./Pictures/New folder/customer.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <h6><b>Total Customer</b></h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 100%; background-color: #12d879"
+                    >
+                      100%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <img
+                    src="./Pictures/New folder/Members.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <h6><b>Members</b></h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 75%; background-color: #12d879"
+                    >
+                      75%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <img
+                    src="./Pictures/New folder/active.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <h6><b>Active</b></h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 50%; background-color: #12d879"
+                    >
+                      50%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <img
+                    src="./Pictures/New folder/complaint.png"
+                    style="width: 50px; height: 50px"
+                  />
+                </div>
+                <div class="col-sm-6">
+                  <h6><b>Complaint Box</b></h6>
+                  <div class="progress">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      style="width: 25%; background-color: #12d879"
+                    >
+                      25%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- charts here -->
+    <div class="container-fluid d-flex justify-content-center">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="row">
+          <div class="col-lg-6 col-sm-6 col-md-6">
+            <canvas
+              id="myChart-type1"
+              style="height: 25rem; width: 40rem"
+            ></canvas>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <canvas
+              id="myChart-type2"
+              style="width: 40rem; height: 23rem"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/helpers.esm.min.js"></script> -->
+    <script>
+      //chart 1 block-chart
+      var chrt = document.getElementById("myChart-type1");
+      var chartId = new Chart(chrt, {
+        type: "bar",
+        data: {
+          labels: ["Total Customer", "Members", "Active", "Complaint Box"],
+          datasets: [
+            {
+              label: "Total customer till today",
+              data: [100, 75, 50, 25],
+              backgroundColor: ["yellow", "aqua", "pink", "lightgreen"],
+              borderColor: ["red", "blue", "fuchsia", "green"],
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          responsive: false,
+        },
+      });
+      //   line chart
+      var chrt = document.getElementById("myChart-type2");
+      var chartId = new Chart(chrt, {
+        type: "line",
+        data: {
+          labels: ["Total Customer", "Members", "Active", "Complaint Box"],
+          datasets: [
+            {
+              label: "Total Customer",
+              data: [860, 1060, 1330, 2210, 7830],
+              borderColor: "red",
+              fill: false,
+            },
+            {
+              label: "Members",
+              data: [1600, 2000, 4000, 6000, 7000],
+              borderColor: "green",
+              fill: false,
+            },
+            {
+              label: "Active",
+              data: [300, 5000, 6000, 4000, 1000],
+              borderColor: "blue",
+              fill: false,
+            },
+            {
+              label: "Complaint Box",
+              data: [200, 8000, 2000, 10000, 3000],
+              borderColor: "orange",
+              fill: false,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+        },
+      });
+
+      function gotoConfiguration(){
+        window.location.href='configuration.html'
+      }
+    </script>
+  </body>
+</html>

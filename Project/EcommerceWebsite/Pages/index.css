@@ -1,0 +1,728 @@
+body {
+    margin: 0rem;
+    padding: 0rem;
+}
+/* NavBar */
+#img1 {
+  padding-left:1em;
+    width: 3rem;
+    height: 3rem;
+}
+
+.ImageDesign {
+    display: flex;
+    align-items: center;
+    background-color: #29ABE3;
+}
+.ImageDesign a{
+    text-decoration: none;
+    color: #2E3191;
+    font-size: 1.3em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.ImageDesign input{
+    margin-left: 5rem;
+    width: 20rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border-color: #2E3191;
+    padding-left: 0.5rem;
+}
+.ImageDesign ul{
+    margin-left: 6rem;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.ImageDesign ul li a{
+    text-decoration-line: none;
+    margin-left: 2rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.ImageDesign ul li a.active{
+    color: #2E3191 !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* .menuItem.active {
+
+} */
+
+.ImageDesign ul li a:hover {
+    color: skyblue;
+}
+
+a {
+    transition: color 0.5s;
+}
+
+#img2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+}
+
+.ImageDesign span{
+    position: relative;
+    display: inline-block;
+}
+
+#img3 {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: 0.25rem;
+}
+
+.ImageDesign a{
+    text-decoration-line: none;
+    color: white;
+    font-size: 1.5rem;  
+}
+/* HomeScreen */
+/* slider image */
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.slides {
+    width: 300%;
+    height: 100%;
+    display: flex;
+    animation: slideAnimation 15s infinite;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-33.33%);
+    }
+
+    50% {
+        transform: translateX(-66.66%);
+    }
+
+    75% {
+        transform: rotateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+.slides div{
+    flex: 1;
+    height: 100%;
+}
+
+.slides div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider input[type="radio"] {
+    display: none;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+.navigation label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+.navigation label::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Hide radio buttons visually */
+.navigation label {
+    position: relative;
+}
+
+.navigation label::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+}
+
+.hrAdjustment {
+    width: 70rem;
+    margin-left: 2rem;
+}
+
+.productheading {
+    margin-left: 2rem;
+}
+
+.IphoneAdj {
+    margin-left: 2rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.price {
+    color: grey;
+    font-size: 22px;
+}
+
+/* Iphone Starts from Here */
+.iphone-13 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.iphone-14 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.iphone-15 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.iphone-13 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.iphone-14 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.iphone-15 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.iphone-13 button:hover {
+    opacity: 0.7;
+}
+
+.iphone-14 button:hover {
+    opacity: 0.7;
+}
+
+.iphone-15 button:hover {
+    opacity: 0.7;
+}
+
+/* OnePlus Starts from here */
+.oneplus-8 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.oneplus-8-pro {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.oneplus-nord {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+.oneplus-8 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Products list page */
+.oneplus-8-pro button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.oneplus-nord button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #2E3191;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.oneplus-8 button:hover {
+    opacity: 0.7;
+}
+
+.oneplus-8-pro button:hover {
+    opacity: 0.7;
+}
+
+.oneplus-nord button:hover {
+    opacity: 0.7;
+}
+
+footer {
+    background-color: #E9A66E;
+    color: #2E3191;
+    text-align: center;
+}
+
+/* About Page */
+
+.AboutDescription {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.aboutheading {
+    font-size: 24px;
+    color: #705A85;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+/* Checkout Page */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin-left: 3rem;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+.cardSpace {
+    margin-left: 1rem;
+}
+
+.quantity {
+    font-size: 2rem;
+    margin-left: 1rem;
+}
+
+.priceSpace {
+    margin-left: 1rem;
+}
+
+.container1 {
+    width: 50%;
+    font-size: 26px;
+}
+
+.QuantitySpan {
+    display: flex;
+    flex-direction: row;
+}
+
+.inputIncrement {
+    margin-left: 12px;
+    border-color: black;
+    border-radius: 1rem;
+    border-width: 0.1rem;
+    height: 30px;
+    width: 6rem;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.descriptionHere {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.descriptiondata {
+    margin-left: 1rem;
+}
+
+/* following code is used to hide Arrows */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inputNumber {
+    width: 2rem;
+    height: 24px;
+    margin-left: 10px;
+}
+
+.purchaseProduct {
+    margin-left: 2rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.buy {
+    width: 25rem;
+    height: 48px;
+    border-radius: 20rem;
+    margin-left: 2rem;
+    background-color: #E9A66E;
+    border: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.add {
+    width: 25rem;
+    height: 48px;
+    border-radius: 20rem;
+    color: #E9A66E;
+    border-color: #E9A66E;
+    font-weight: bolder;
+}
+
+/* Checkout form Detail*/
+#checkoutform {
+    background-color: skyblue;
+    width: 50rem;
+    height: 42rem;
+    border-radius: 2rem;
+    margin-left: 6rem;
+    margin-top: 2rem;
+}
+
+.formContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 35rem;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 2rem;
+
+
+}
+
+.billinginfo {
+    color: #2E3191;
+    display: flex;
+    flex: 45%;
+    flex-direction: column;
+    font-size: 24px;
+
+}
+
+.inputform {
+    width: 16rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-color: #2E3191;
+}
+
+.col {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.state-row {
+    display: inline-flex;
+}
+
+.state {
+    width: 40%;
+}
+
+.inputstate {
+    width: 6rem;
+    height: 2rem;
+    border: none;
+    border-color: #2E3191;
+}
+
+.inputzip {
+    width: 6rem;
+    height: 2rem;
+    margin-left: 1rem;
+    border: none;
+    border-color: #2E3191;
+}
+
+.Zip-row {
+    display: grid;
+}
+
+#zip-label {
+    margin-left: 1rem;
+}
+
+.Accepted-cards-Conatiner {
+    color: #2E3191;
+    display: flex;
+    margin-top: 0.5rem;
+    flex: 40%;
+    flex-direction: column;
+    font-size: 24px;
+    height: 33rem;
+}
+
+.cvv {
+    width: 6rem;
+    height: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-color: #2E3191;
+}
+
+.datesec {
+    width: 6rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    border: none;
+    border-color: #2E3191;
+}
+
+.checkstatement {
+    margin-left: 3rem;
+}
+
+.btnStatement {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.labelst {
+    font-size: 20px;
+}
+
+.btn {
+    margin-left: 14rem;
+    margin-top: 1rem;
+    width: 18rem;
+    height: 3rem;
+    border-radius: 20rem;
+    font-size: 18px;
+    background-color: #A978FF;
+    color: white;
+    border: none;
+}
+
+.totalcart {
+    background-color: skyblue;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 60rem;
+    margin-top: -40rem;
+    width: 12rem;
+    margin-right: 2rem;
+    border-radius: 2rem;
+    padding-left: 2rem;
+    color: #2E3191;
+}
+
+.priceMe {
+    padding-left: 4rem;
+}
+
+.removeDecoration {
+    text-decoration-line: none;
+}
+
+
+/* Signup-LoginForm */
+.loginsignup-form {
+    display: flex;
+    background-color: #1B1564;
+    justify-content: space-evenly;
+    /* width: 100%; */
+    /* padding: 20px; */
+    height: 100vh;
+}
+
+.Logincontainer {
+    background-color: #29ABE3;
+    margin: 6em;
+    width: 40%;
+    height: 21em;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+.Logincontainer button[type="submit"] {
+    margin-top: 10px;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+}
+
+.Logincontainer input {
+    width: 14rem;
+    height: 2rem;
+    margin-top: 10px;
+    border-radius: 2rem;
+    padding-left: 12px;
+    border: none;
+}
+
+.Logincontainer input[type="checkbox"] {
+    width: 26px;
+    height: 15px;
+}
+
+/* signup container form */
+.signupContainer {
+    background-color: #A978FF;
+    /* margin-top: 2em; */
+    margin: 6em;
+    width: 40%;
+    height: 21em;
+    border-radius: 2rem;
+    text-align: center;
+
+}
+
+.signupContainer input {
+    width: 14rem;
+    height: 2rem;
+    margin-top: 10px;
+    border: none;
+    border-radius: 2rem;
+    padding-left: 12px;
+}
+
+.signupContainer h4 {
+    text-align: center;
+}
+
+.signupContainer label {
+    margin-left: 1rem;
+}
+
+.signupContainer input[name="email"] {
+    margin-left: 100px;
+}
+
+.signupContainer input[name="psw"] {
+    margin-left: 76px;
+}
+
+.signupContainer input[name="psw-repeat"] {
+    margin-left: 25px;
+}
+
+.signupContainer p {
+    text-align: center;
+}
+
+.signupContainer button[type="submit"] {
+    margin-top: 10px;
+    width: 12rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
+}
+
+.signupContainer small {
+    text-align: center;
+}

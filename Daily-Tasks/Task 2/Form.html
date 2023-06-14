@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form validation</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./Bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.css">
+  </head>
+  <body>
+    <div class="d-flex justify-content-center w-90 m-1">
+      <form id="registration" class="bg-primary w-25 p-4 rounded">
+        <input type="text" class="form-control" placeholder="Full Name" id="fullName" autocomplete="off"/><br />
+        <input type="text" class="form-control" placeholder="UserName" id="userName" autocomplete="off"/><br />
+        <input
+          type="number" autocomplete="off" id="phoneNumber"
+          class="form-control"
+          placeholder="Phone Number"
+        /><br />
+        <input type="email" class="form-control" placeholder="Email"  id="email"/><br />
+        <input
+          type="password" autocomplete="off" id="password"
+          class="form-control"
+          placeholder="Password"
+        /><br />
+        <input 
+            style="width: 25px;"
+          type="checkbox" autocomplete="off"
+          name="showPassword"
+          id="showPassword"
+          onchange="passwordvisibility() "
+        />
+        <label for="showPassword" class="form-label">Show Password</label>
+        <!-- first selection -->
+        <select
+          onchange="TimePeriod()"
+          name="degreeCourse"
+          id="degreeCourse" autocomplete="off"
+          class="form-control" 
+          required
+        >
+          <option value="">
+            Choose Degree Name...
+          </option>
+          <option value="ba">B.A</option>
+          <option value="bsc">Bsc</option>
+          <option value="btech">B.Tech</option></select
+        ><br />
+        <!-- Second selection -->
+        <select
+          name="yearsSelect"
+          id="yearsSelect"
+          class="form-control"
+          onchange="mycourse()"
+          hidden
+        >
+          <!-- <option value="" disabled selected hidden>Duration...</option> --></select
+        ><br />
+        <!-- Third selection -->
+        <select name="courseName" id="courseName" class="form-control" hidden>
+          <option value="">course here</option></select
+        ><br />
+
+        <!-- button submit -->
+        <button type="submit" class="btn btn-primary bg-black" value="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <script src="Form.js"></script>
+  </body>
+</html>

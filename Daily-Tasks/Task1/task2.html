@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="myIP()">Get Ip</button>
+      <button onclick="locationinfo()">Get location</button>
+      <p id="showip"></p>
+      <p id="showlocation"></p>
+    </div>
+    <script>
+      var ab = document.getElementById("showlocation");
+     
+      function locationinfo() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(mylocation);
+        } else {
+          alert("Dear Customer, please try again later");
+        }
+      }
+      function mylocation(currentposition) {
+        const latitude = currentposition.coords.latitude;
+        const longitude = currentposition.coords.longitude;
+        ab.innerHTML = "Latitude:" + latitude + "<br> Longitude: " + longitude;
+      }
+
+      function myIP() {
+        fetch("https://api.ipify.org?format=json")
+          .then((response) => response.json())
+          .then((getip) => {
+            var ipAdd = getip.ip;
+            var cd = document.getElementById("showip");
+            cd.innerHTML="Ip address: " + ipAdd;
+            
+          })
+          .catch((error) => {
+            console.log("Ip Error: " + error);
+          });
+      }
+    </script>
+  </body>
+</html>
