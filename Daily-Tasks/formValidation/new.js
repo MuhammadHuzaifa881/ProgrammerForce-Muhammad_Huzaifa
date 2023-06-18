@@ -46,6 +46,8 @@ registration.addEventListener("submit", function (e) {
   if (validateForm()) {
     registration.submit();
   }
+  showtoconsole();
+
 });
 function showtoconsole(){
   var fullNameInput = document.getElementById("fullName").value;

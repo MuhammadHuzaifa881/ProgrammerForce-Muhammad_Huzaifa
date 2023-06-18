@@ -16,27 +16,45 @@
   <body>
     <div class="d-flex justify-content-center w-90 m-1">
       <form id="registration" class="bg-primary w-25 p-4 rounded">
-        <input type="text" class="form-control" placeholder="Full Name" id="fullName" autocomplete="off"/><br />
-        <input type="text" class="form-control" placeholder="UserName" id="userName" autocomplete="off"/><br />
-        <input
+        <div>
+        <input type="text" class="form-control" placeholder="Full Name" id="fullName" autocomplete="off"/>
+        <span id="fullNameError" style="color: red;"></span>
+        </div><br />
+        <div>
+          <input type="text" class="form-control" placeholder="UserName" id="userName" autocomplete="off"/>
+          <span id="UserNameError" style="color: red;"></span>
+        </div><br />
+        <div>
+          <input
           type="number" autocomplete="off" id="phoneNumber"
           class="form-control"
           placeholder="Phone Number"
-        /><br />
-        <input type="email" class="form-control" placeholder="Email"  id="email"/><br />
-        <input
+        />
+        <span id="phoneNumberError" style="color: red;"></span>
+        </div><br />
+        <div>
+          <input type="email" class="form-control" placeholder="Email"  id="email"/>
+          <span id="EmailError" style="color: red;"></span>
+        </div><br />
+        <div>
+          <input
           type="password" autocomplete="off" id="password"
           class="form-control"
           placeholder="Password"
-        /><br />
-        <input 
-            style="width: 25px;"
-          type="checkbox" autocomplete="off"
-          name="showPassword"
-          id="showPassword"
-          onchange="passwordvisibility() "
         />
-        <label for="showPassword" class="form-label">Show Password</label>
+        <span id="passwordError" style="color: red;"></span>
+        </div><br />
+        <div>
+          <input 
+          style="width: 25px;"
+        type="checkbox" autocomplete="off"
+        name="showPassword"
+        id="showPassword"
+        onchange="passwordvisibility() "
+      />
+      <label for="showPassword" class="form-label">Show Password</label>
+        </div>
+        
         <!-- first selection -->
         <select
           onchange="TimePeriod()"
