@@ -1,0 +1,49 @@
+ <div class="row">
+              <!-- box 1 -->
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div
+                  class="card text-white"
+                  style="background-color: #000080; height: 20rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title">Big Box</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <!-- box 2 -->
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div
+                          class="card text-white"
+                          style="background-color: #0047ab; height: 10rem"
+                        >
+                          <div class="card-body">
+                            <h5 class="card-title">Box 1</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- box 3 -->
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div
+                          class="card text-white"
+                          style="background-color: #4169e1; height: 10rem"
+                        >
+                          <div class="card-body">
+                            <h5 class="card-title">Box 2</h5>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- box 4 -->
+                      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <div class="card">
+                          <div
+                            class="card-body text-white"
+                            style="background-color: #0073cf; height: 10rem"
+                          >
+                            <h5 class="card-title">Box 3</h5>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+            </div>
+            
